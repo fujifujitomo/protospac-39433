@@ -1,0 +1,37 @@
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2 class="page-heading">プロトタイプ編集</h2>
+      <%# 部分テンプレートでフォームを表示する %>
+      
+    <%= form_with model: @prototype, local: true do |form| %>
+
+      <div class="field">
+        <%= form.label :title, "プロトタイプの名称" %><br />
+        <%= form.text_field :title,id:"user_email" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :catch_copy, "キャッチコピー" %><br />
+        <%= form.text_area :catch_copy %>
+      </div>
+
+      <div class="field">
+        <%= form.label :concept, "コンセプト" %><br />
+        <%= form.text_area :concept %>
+      </div>
+
+      <div class="field">
+        <%= form.label :image, "プロトタイプの画像" %><br />
+        <%= form.file_field :image %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "保存する",class: :form__btn %>
+      </div>
+
+    <% end %>
+
+    </div>
+  </div>
+</div>
