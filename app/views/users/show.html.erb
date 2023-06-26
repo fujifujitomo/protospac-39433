@@ -8,19 +8,19 @@
         <tbody>
           <tr>
             <th class="table__col1">名前</th>
-            <td class="table__col2"><%= @name %></td>
+            <td class="table__col2"><%=@name %></td>
           </tr>
           <tr>
             <th class="table__col1">プロフィール</th>
-            <td class="table__col2"><%= "#{@name}のプロフィール" %></td>
+            <td class="table__col2"><%= @user.profile %></td>
           </tr>
           <tr>
             <th class="table__col1">所属</th>
-            <td class="table__col2"><%= "#{@name}の所属" %></td>
+            <td class="table__col2"><%= @user.occupation %></td>
           </tr>
           <tr>
             <th class="table__col1">役職</th>
-            <td class="table__col2"><%= "#{@name}の役職" %></td>
+            <td class="table__col2"><%= @user.position %></td>
           </tr>
         </tbody>
       </table>
